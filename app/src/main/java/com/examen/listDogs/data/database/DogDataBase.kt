@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.examen.listDogs.data.dao.DogDao
 import com.examen.listDogs.data.model.DogRoom
-import java.net.InetSocketAddress
+
 
 @Database(entities = [DogRoom::class], version = 1 , exportSchema = false)
 abstract class DogDataBase: RoomDatabase() {

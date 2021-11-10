@@ -7,5 +7,5 @@ class GetUseCase {
 
     private val repository = DogsRepository()
 
-    suspend operator fun invoke(): List<Dog>? = repository.getAllMyDogs()
+    suspend operator fun invoke(): List<Dog> = repository.getAllMyDogs()
 }

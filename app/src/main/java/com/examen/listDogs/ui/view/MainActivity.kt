@@ -1,10 +1,8 @@
 package com.examen.listDogs.ui.view
 
-import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.examen.listDogs.R
@@ -39,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
         viewModelDogs.onCreate()
-        viewModelDogs.apiModel.observe(this, Observer {
+        viewModelDogs.apiModel.observe(this, {
             recyclerView.layoutManager = LinearLayoutManager(this)
             recyclerView.adapter = DogsAdapter(it, this)
 

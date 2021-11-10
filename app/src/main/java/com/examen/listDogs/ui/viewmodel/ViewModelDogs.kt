@@ -1,7 +1,6 @@
 package com.examen.listDogs.ui.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.*
 import com.examen.listDogs.core.Aplication.Companion.preferences
 import com.examen.listDogs.data.database.DogDataBase
@@ -44,7 +43,7 @@ class ViewModelDogs(application: Application): AndroidViewModel(application) {
     suspend fun addInformationToDataBase(){
         val result = getDogsUseCase()
         if (!result.isNullOrEmpty()) {
-            result.forEach { it ->
+            result.forEach {
                 val inserModel = DogRoom(0, it.age, it.description, it.dogName, it.image)
                 repository.addDogs(inserModel)
             }
