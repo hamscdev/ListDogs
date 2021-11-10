@@ -2,7 +2,10 @@ package com.examen.listDogs.core
 
 import android.app.Application
 import com.examen.listDogs.di.Preference
-import java.lang.Appendable
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+
+
 
 class Aplication: Application() {
 
@@ -15,5 +18,6 @@ class Aplication: Application() {
         super.onCreate()
 
          preferences = Preference(applicationContext)
+
     }
 }
